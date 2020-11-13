@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/style_login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav id="tnb">
+                <a href="login.html"><span>로그인</span></a>
+                |
+                <a href="#"><span>회원가입</span></a>
+            </nav>
+            <!--nav#tnb-->
+            <div id="topArea">
+                <div id="hdLogo">
+                    <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+                </div>
+                <!--div#hdLogo-->
+            </div>
+            <!--div#topArea-->
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <div id="btnFrame">
+                <div id="loginTab">로그인</div>
+                <div id="joinTab">회원가입</div>
+            </div>
+            <!--div#btnFrame-->
+            <form action="index.html" name="loginFrm" id="loginFrm">
+                <div id="loginFrame">
+                    <input type="text" id="userID" size="20" placeholder="아이디">
+                    <p id="alertID"></p>
+                    <input type="password" id="userPW" size="20" placeholder="비밀번호">
+                    <p id="alertPW"></p>
+                    <button type="button" id="loginBtn">로그인</button>
+                    <hr>
+                    <p>아이디/비밀번호를 잊어버리셨나요?</p>
+                </div>
+                <!--div#loginFrame-->
+            </form>
+            <form action="join_page.html" name="joinFrm" id="joinFrm">
+                <div id="joinFrame">
+                    <div id="termsFrame">
+                        <div id="termsTitle">
+                            <span>이용약관</span>
+                            <span>이용약관에 동의합니다. <input type="checkbox" name="termsAgree" id="termsAgree"></span>
+                        </div>
+                        <!--div#termsTitle-->
+                        <div id="termsContents">
+                            <iframe src="join_terms.html" frameborder="0" width="600" height="130"></iframe>
+                        </div>
+                        <!--div#termsContents-->
+                    </div>
+                    <!--div#termsFrame-->
+                    <div id="policyFrame">
+                        <div id="policyTitle">
+                            <span>개인정보 취급방침</span>
+                            <span>개인정보 취급방침에 동의합니다. <input type="checkbox" name="policyAgree" id="policyAgree"></span>
+                        </div>
+                        <!--div#policyTitle-->
+                        <div id="policyContents">
+                            <iframe src="join_policy.html" frameborder="0" width="600" height="130"></iframe>
+                        </div>
+                        <!--div#policyContents-->
+                    </div>
+                    <!--div#policyFrame-->
+                    <div id="alertAgree">&nbsp;</div>
+                    <a href="index.html" id="cancelBtn">취소</a>
+                    <a href="#" id="joinBtn">확인</a>
+                </div>
+                <!--div#joinFrame-->
+            </form>
+        </main>
+        <!--main#main-->
+
+
+        <footer id="footer">
+            <div id="info">
+                <a href="#"><span>개인정보처리방침</span></a>
+                |
+                <a href="#"><span>이용약관</span></a>
+                |
+                <a href="#"><span>오시는 길</span></a>
+                |
+                <a href="#"><span>사이트 맵</span></a>
+                <p>서울특별시 세계구 한국동 남한길 1 우)12345 T. 02-123-4567 F. 02-890-1234</p>
+                <p>Copyright(C) 대한민국관광공사 All Right Reserved.</p>
+            </div>
+            <!--div#info-->
+            <div id="ftLogo">
+                <a href="index.html"><img src="images/ft_logo_sample_170x80.png" alt="푸터로고"></a>
+            </div>
+            <!--div#ftLogo-->
+        </footer>
+        <!--footer#footer-->
+    </div>
+    <!--div#wrap-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/script_login.js"></script>
+</body></html>

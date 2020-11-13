@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+    list-style: none;
+}
+
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f6e7d0;;
+}
+
+/*header 영역 시작*/
+#header nav#tnb {
+    width: 1200px;
+    height: 30px;
+    text-align: right;
+    background-color: #fff;
+}
+#tnb a {
+    padding: 0 6px;
+    font-weight: bold;
+}
+#tnb span {
+    color: #888;
+}
+#tnb span:hover {
+    color: #555;
+}
+#header div#topArea {
+    width: 1200px;
+    height: 100px;
+}
+#topArea div#hdLogo {
+    width: 200px;
+    text-align: right;
+    padding-top: 10px;
+}
+/*header 영역 끝*/
+
+/*main 영역 시작*/
+main#main {
+    width: 800px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+/*    position: relative;*/
+}
+#main div#btnFrame {
+    width: 800px;
+    display: flex;
+}
+#btnFrame>div {
+    width: 400px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+#btnFrame>div#loginTab {
+    background-color: #ccc;
+}
+#main div#loginFrame {
+    width: 800px;
+    height: 460px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 40px;
+
+/*    display: none;*/
+}
+#loginFrame input {
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+    border: 2px solid #aaa;
+    font-size: 18px;
+    background-color: #f6e7d0;
+}
+#loginFrame button {
+    width: 200px;
+    font-size: 18px;
+    padding: 15px;
+    font-weight: bold;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(253, 164, 87, 0.5);
+    cursor: pointer;
+}
+#loginFrame hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+#loginFrame p {
+    color: #f50;
+    margin: 0 110px;
+    text-align: left;
+}
+#loginFrame p:last-child {
+    margin: 40px 20px 10px;
+    color: #f50;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+/*    text-decoration: underline;*/
+}
+
+#main div#joinFrame {
+    width: 800px;
+    height: 460px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px 40px;
+
+    display: none;
+}
+#termsTitle, #policyTitle {
+    display: flex;
+    justify-content: space-between;
+/*    border: 1px solid #000;*/
+    margin: 0 50px;
+    padding: 10px;
+}
+#termsTitle span:first-child, #policyTitle span:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
+#termsTitle span:last-child, #policyTitle span:last-child {
+    font-size: 14px;
+}
+#joinFrame iframe {
+    border: 1px solid #ccc;
+}
+#joinFrame div#alertAgree {
+    color: #f80;
+    text-align: left;
+    margin: 0 60px;
+}
+#joinFrame a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    width: 100px;
+    margin: 5px 20px 0;
+    cursor: pointer;
+}
+a#cancelBtn {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+a#joinBtn {
+    background-color: rgba(253, 164, 87, 0.5);
+    border: 1px solid #ccc;
+}
+/*main 영역 끝*/
+
+/*footer 영역 시작*/
+footer#footer {
+    width: 1200px;
+    height: 130px;
+    display: flex;
+    background-color: #ccc;
+}
+#footer div#info {
+    width: 1000px;
+    height: 130px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 20px;
+}
+#info span {
+    padding: 0 10px;
+}
+#info p:last-child {
+    font-style: italic;
+}
+#footer div#ftLogo {
+    width: 200px;
+    height: 130px;
+    line-height: 200px;
+}
+/*footer 영역 끝*/
+
+
+header, main, footer, nav {
+    display: block;
+}

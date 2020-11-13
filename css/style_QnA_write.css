@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+    list-style: none;
+}
+
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*header 영역 시작*/
+#header nav#tnb {
+    width: 1200px;
+    height: 30px;
+    text-align: right;
+}
+#tnb a {
+    padding: 0 6px;
+    font-weight: bold;
+}
+#tnb span {
+    color: #888;
+}
+#tnb span:hover {
+    color: #555;
+}
+#header div#topArea {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    background-color: #f6e7d0;
+}
+#topArea div#hdLogo {
+    width: 200px;
+    text-align: right;
+    line-height: 170px;
+}
+#topArea nav#gnb {
+    width: 1000px;
+}
+#gnb>ul#mainMenu {
+    padding-left: 200px;
+    padding-top: 25px;
+}
+#gnb>ul>li {
+    float: left;
+}
+#gnb ul li a {
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    padding: 15px;
+}
+#gnb>ul#mainMenu>li>a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#gnb>ul#mainMenu>li>a:hover {
+    background-color: #fca;
+}
+#gnb ul.subMenu {
+    position: relative;
+    z-index: 5;
+
+    display: none;
+}
+#gnb ul.subMenu a {
+    background-color: #f6e7d0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+#gnb ul.subMenu li:last-child a {
+    border-bottom: 1px solid #ccc;
+}
+#gnb ul.subMenu a:hover {
+    background-color: #fca;
+    color: #000;
+}
+nav#snb {
+    width: 100%;
+    background-color: #f6cf91;
+    position: absolute;
+    left: 0;
+}
+#snb div#snbArea {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+}
+#snbArea div {
+    width: 260px;
+    height: 70px;
+    border: 3px solid #f0873a;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+/*    cursor: pointer;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#snbArea a:not(:first-child) div {
+    border-left: none;
+}
+#snbArea div span {
+    color: #f0873a;
+}
+/*header 영역 끝*/
+
+/*main 영역 시작*/
+main#main {
+    margin-top: 70px;
+    background-color: #f6e7d0;
+    padding: 50px 50px 70px;
+    text-align: center;
+}
+
+#main div#title input {
+    width: 1100px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+}
+
+#main div#board textarea {
+    width: 1100px;
+    height: 500px;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #aaa;
+}
+
+div#run {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#run div#pwFrame input{
+    padding: 5px;
+    width: 120px;
+    border: 1px solid #ccc;
+}
+#run div#enterFrame button {
+    padding: 6px;
+    width: 70px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#run div#enterFrame button#regBtn {
+    background-color: rgba(253, 164, 87, 0.5);
+}
+/*main 영역 끝*/
+
+/*footer 영역 시작*/
+footer#footer {
+    width: 1200px;
+    height: 130px;
+    display: flex;
+    background-color: #ccc;
+}
+#footer div#info {
+    width: 1000px;
+    height: 130px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 20px;
+}
+#info span {
+    padding: 0 10px;
+}
+#info p:last-child {
+    font-style: italic;
+}
+#footer div#ftLogo {
+    width: 200px;
+    height: 130px;
+    line-height: 200px;
+}
+/*footer 영역 끝*/
+
+
+header, main, footer, nav {
+    display: block;
+}

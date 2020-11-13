@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원정보 수정</title>
+    <link rel="stylesheet" href="css/style_memModify.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav id="tnb">
+                <a href="login.html"><span>로그인</span></a>
+                |
+                <a href="#"><span>회원가입</span></a>
+            </nav>
+            <!--nav#tnb-->
+            <div id="topArea">
+                <div id="hdLogo">
+                    <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+                </div>
+                <!--div#hdLogo-->
+                <nav id="gnb">
+                    <ul id="mainMenu">
+                        <li>
+                            <a href="#">지리산단풍축제</a>
+                            <ul class="subMenu">
+                                <li><a href="#">축제개요</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램</a>
+                            <ul class="subMenu">
+                                <li><a href="#">일정</a></li>
+                                <li><a href="#">프로그램</a></li>
+                                <li><a href="buy_page.html">온라인 예매</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                            <ul class="subMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="gallery.html">갤러리</a></li>
+                                <li><a href="QnA.html">Q&amp;A</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">자원활동가</a>
+                            <ul class="subMenu">
+                                <li><a href="#">모집안내</a></li>
+                                <li><a href="#">지원하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--nav#gnb-->
+            </div>
+            <!--div#topArea-->
+            <nav id="snb">
+                <div id="snbArea">
+                    <a href="mypage.html">
+                        <div id="mypageTab">
+                            <span>내 정보</span>
+                            <span>+</span>
+                        </div>
+                    </a>
+                    <a href="memModify.html">
+                        <div id="memModifyTab">
+                            <span>회원정보 수정</span>
+                            <span>+</span>
+                        </div>
+                    </a>
+                    <!--div#mypageTab-->
+                </div>
+                <!--div#snbArea-->
+            </nav>
+            <!--nav#snb-->
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <div id="memModifyTitle">
+                <h1>회원정보 수정</h1>
+                <p>HOME > 내 정보 > <span>회원정보 수정</span></p>
+            </div>
+            <!--div#memModifyTitle-->
+            <div id="memModifyContents">
+                <form action="index.html" method="post" name="frm" id="frm">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="list">아이디</td>
+                                <td><input type="text" name="userID" id="userID" placeholder="test1" readonly></td>
+                            </tr>
+                            <tr>
+                                <td class="list">비밀번호</td>
+                                <td><input type="password" name="userPW" id="userPW" placeholder="변경하실 비밀번호를 입력해주세요."></td>
+                            </tr>
+                            <tr class="alertRow">
+                                <td class="alert" id="alertPW" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="list">비밀번호 확인</td>
+                                <td><input type="password" name="userRePW" id="userRePW" placeholder="비밀번호를 다시 한 번 입력해주세요."></td>
+                            </tr>
+                            <tr class="alertRow">
+                                <td class="alert" id="alertRePW" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="list">이름</td>
+                                <td><input type="text" name="userName" id="userName" placeholder="홍길동" readonly></td>
+                            </tr>
+                            <tr>
+                                <td class="list">생년월일</td>
+                                <td>
+                                    <select name="uYear" id="uYear">
+                                        <option value="#">년</option>
+                                    </select>
+                                    <select name="uMonth" id="uMonth">
+                                        <option value="#">월</option>
+                                    </select>
+                                    <input type="text" name="uDate" id="uDate" size="2" placeholder="일">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="list">성별</td>
+                                <td>
+                                    <input type="radio" name="gender" id="male" checked> 남
+                                    <input type="radio" name="gender" id="female"> 여
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="list">휴대폰번호</td>
+                                <td>
+                                    <input type="text" name="userPhone" id="userPhone" placeholder="01012345678" readonly>
+                                    <button type="button" id="changePhoneBtn">변경</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" id="modifyBtn">수정하기</button>
+                </form>
+            </div>
+            <!--div#memModifyContents-->
+        </main>
+        <!--main#main-->
+
+        <footer id="footer">
+            <div id="info">
+                <a href="#"><span>개인정보처리방침</span></a>
+                |
+                <a href="#"><span>이용약관</span></a>
+                |
+                <a href="#"><span>오시는 길</span></a>
+                |
+                <a href="#"><span>사이트 맵</span></a>
+                <p>서울특별시 세계구 한국동 남한길 1 우)12345 T. 02-123-4567 F. 02-890-1234</p>
+                <p>Copyright(C) 대한민국관광공사 All Right Reserved.</p>
+            </div>
+            <!--div#info-->
+            <div id="ftLogo">
+                <a href="index.html"><img src="images/ft_logo_sample_170x80.png" alt="푸터로고"></a>
+            </div>
+            <!--div#ftLogo-->
+        </footer>
+        <!--footer#footer-->
+    </div>
+    <!--div#wrap-->
+    <div id="layer">
+        <div id="layerPopup">
+           <form action="#" id="frmPopup" name="frmPopup">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="popList">휴대폰번호</td>
+                        <td>
+                            <input type="text" name="changePhone" id="changePhone" placeholder="변경하실 휴대폰 번호를 입력해주세요.">
+                            <button type="button" id="changeCfBtn">인증</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="popList">SMS 인증번호</td>
+                        <td>
+                            <input type="text" name="changePhoneConfirm" id="changePhoneConfirm" placeholder="인증번호를 입력해주세요" readonly>
+                            <button type="button" id="changeVfBtn">확인</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </form>
+            <span id="closePopup">x</span>
+        </div>
+        <!--div#layerPopup-->
+    </div>
+    <!--div#layer-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/script_memModify.js"></script>
+</body></html>

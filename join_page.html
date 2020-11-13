@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/style_join_page.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav id="tnb">
+                <a href="login.html"><span>로그인</span></a>
+                |
+                <a href="#"><span>회원가입</span></a>
+            </nav>
+            <!--nav#tnb-->
+            <div id="topArea">
+                <div id="hdLogo">
+                    <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+                </div>
+                <!--div#hdLogo-->
+            </div>
+            <!--div#topArea-->
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <h2>회원가입</h2>
+            <form action="index.html" method="post" name="frm" id="frm">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="list">아이디</td>
+                            <td><input type="text" name="userID" id="userID" placeholder="아이디를 입력해주세요."></td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertID" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">비밀번호</td>
+                            <td><input type="password" name="userPW" id="userPW" placeholder="비밀번호를 입력해주세요."></td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertPW" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">비밀번호 확인</td>
+                            <td><input type="password" name="userRePW" id="userRePW" placeholder="비밀번호를 다시 한 번 입력해주세요."></td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertRePW" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">이름</td>
+                            <td><input type="text" name="userName" id="userName" placeholder="이름을 입력해주세요."></td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertName" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">생년월일</td>
+                            <td>
+                                <select name="uYear" id="uYear">
+                                    <option value="#">년</option>
+                                </select>
+                                <select name="uMonth" id="uMonth">
+                                    <option value="#">월</option>
+                                </select>
+                                <input type="text" name="uDate" id="uDate" size="2" placeholder="일">
+                            </td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertBirth" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">성별</td>
+                            <td>
+                            <input type="radio" name="gender" id="male" checked> 남
+                            <input type="radio" name="gender" id="female"> 여
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="list">휴대폰번호</td>
+                            <td>
+                            <input type="text" name="userPhone" id="userPhone" placeholder="-를 제외하고 입력해주세요">
+                            <button type="button" id="cfBtn">인증</button>
+                            </td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertPhone" colspan="2"></td></tr>
+                        <tr>
+                            <td class="list">SMS 인증번호</td>
+                            <td>
+                                <input type="text" name="userPhoneConfirm" id="userPhoneConfirm" placeholder="인증번호를 입력해주세요" readonly>
+                            <button type="button" id="vfBtn" value="1">확인</button>
+                            </td>
+                        </tr>
+                        <tr class="alertRow"><td class="alert" id="alertPhoneConfirm" colspan="2"></td></tr>
+                    </tbody>
+                </table>
+                <button type="button" id="joinBtn">가입하기</button>
+            </form>
+        </main>
+        <!--main#main-->
+
+
+        <footer id="footer">
+            <div id="info">
+                <a href="#"><span>개인정보처리방침</span></a>
+                |
+                <a href="#"><span>이용약관</span></a>
+                |
+                <a href="#"><span>오시는 길</span></a>
+                |
+                <a href="#"><span>사이트 맵</span></a>
+                <p>서울특별시 세계구 한국동 남한길 1 우)12345 T. 02-123-4567 F. 02-890-1234</p>
+                <p>Copyright(C) 대한민국관광공사 All Right Reserved.</p>
+            </div>
+            <!--div#info-->
+            <div id="ftLogo">
+                <a href="index.html"><img src="images/ft_logo_sample_170x80.png" alt="푸터로고"></a>
+            </div>
+            <!--div#ftLogo-->
+        </footer>
+        <!--footer#footer-->
+    </div>
+    <!--div#wrap-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/script_join_page.js"></script>
+</body></html>

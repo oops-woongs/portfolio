@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>관리자페이지_회원목록</title>
+    <link rel="stylesheet" href="css/style_managerPage_userList.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="hdLogo">
+                <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+            </div>
+            <!--div#hdLogo-->
+            <nav id="tnb">
+                <div id="tnbLeft">
+                    <span>관리자 페이지</span>
+                </div>
+                <div id="tnbRight">
+                    <a href="index.html">홈페이지 바로가기</a>
+                    |
+                    <span>Admin1 님</span>
+                </div>
+            </nav>
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <div id="aside">
+                <ul id="mainMenu">
+                    <li>
+                        <a href="#">회원 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="managerPage_userList.html">회원 목록</a></li>
+                            <li><a href="#">뉴스레터 구독</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">게시판 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="#">게시판 설정</a></li>
+                            <li><a href="managerPage_bbsManagement.html">게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예매 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="#">전체 예매 목록</a></li>
+                            <li><a href="#">취소/환불</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">통계 분석</a>
+                    </li>
+                </ul>
+            </div>
+            <!--div#aside-->
+            <div id="contents">
+                <div id="titleFrame">
+                    <p>HOME > 회원 관리 > <span>회원 목록</span></p>
+                    <h1>회원 목록</h1>
+                </div>
+                <!--div#titleFrame-->
+                <div id="searchFrame">
+                    <ul>
+                        <li>
+                            <span>검색어</span>
+                            <select>
+                                <option>아이디</option>
+                                <option>휴대폰번호</option>
+                            </select>
+                            <input type="text">
+                        </li>
+                        <li>
+                            <span>나이</span>
+                            <input type="text" name="minAge" id="minAge" size="3">
+                            세 ~
+                            <input type="text" name="maxAge" id="maxAge" size="3">
+                            세
+                        </li>
+                        <li>
+                            <span>가입일</span>
+                            <input type="text" size="10" class="datepicker">
+                            ~
+                            <input type="text" size="10" class="datepicker">
+                        </li>
+                    </ul>
+                    <button type="button">검색</button>
+                </div>
+                <!--div#searchFrame-->
+                <div id="listFrame">
+                    <div id="listFrameMenu">
+                        <p>회원 목록</p>
+                        <p>[총 회원 수 <span id="totalNum">0</span>명] 검색 결과 <span id="searchNum">0</span>명</p>
+                        <select>
+                            <option>10개씩 보기</option>
+                            <option>30개씩 보기</option>
+                            <option>50개씩 보기</option>
+                        </select>
+                    </div>
+                    <!--div#listFrameMene-->
+                    <div id="userListFrame">
+                        <div id="userListMenu">
+                            <button type="button" id="userDel">&times;삭제</button>
+                            <button type="button" id="sendSms">SMS 보내기</button>
+                        </div>
+                        <!--div#userListMenu-->
+                        <div id="userList">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" id="chkParent"></td>
+                                        <td>이름</td>
+                                        <td>아이디</td>
+                                        <td>등록일</td>
+                                        <td>휴대전화</td>
+                                        <td>나이</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>홍길동</td>
+                                        <td>test01</td>
+                                        <td>2020-09-05</td>
+                                        <td>010-1234-5678</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>홍길서</td>
+                                        <td>test02</td>
+                                        <td>2020-09-01</td>
+                                        <td>010-9123-4567</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--div#userListFrame-->
+                    <div id="listFramePage">
+                        <a href="#"><span>《</span></a>
+                        <a href="#"><span>〈</span></a>
+                        <a href="#"><span>1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        <a href="#"><span>4</span></a>
+                        <a href="#"><span>〉</span></a>
+                        <a href="#"><span>》</span></a>
+                    </div>
+                    <!--div#listFramePage-->
+                </div>
+                <!--div#listFrame-->
+            </div>
+            <!--div#contents-->
+
+        </main>
+        <!--main#main-->
+
+    </div>
+    <!--div#wrap-->
+    <div id="smsLayer">
+        <div id="smsPopup">
+            <textarea cols="25" rows="7" placeholder="전송하실 문자메시지를 입력해 주세요."></textarea>
+            <button type="button" id="sendSmsBtn">전송</button>
+            <button type="button" id="cancelSmsBtn">취소</button>
+        </div><!--div#smsPopup-->
+    </div><!--div#smsLayer-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+    <script src="script/script_managerPage_userList.js"></script>
+</body>
+
+</html>

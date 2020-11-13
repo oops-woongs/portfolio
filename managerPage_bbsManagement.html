@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>관리자페이지_회원목록</title>
+    <link rel="stylesheet" href="css/style_managerPage_bbsManagement.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="hdLogo">
+                <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+            </div>
+            <!--div#hdLogo-->
+            <nav id="tnb">
+                <div id="tnbLeft">
+                    <span>관리자 페이지</span>
+                </div>
+                <div id="tnbRight">
+                    <a href="index.html">홈페이지 바로가기</a>
+                    |
+                    <span>Admin1 님</span>
+                </div>
+            </nav>
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <div id="aside">
+                <ul id="mainMenu">
+                    <li>
+                        <a href="#">회원 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="managerPage_userList.html">회원 목록</a></li>
+                            <li><a href="#">뉴스레터 구독</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">게시판 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="#">게시판 설정</a></li>
+                            <li><a href="managerPage_bbsManagement.html">게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예매 관리 +</a>
+                        <ul class="subMenu">
+                            <li><a href="#">전체 예매 목록</a></li>
+                            <li><a href="#">취소/환불</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">통계 분석</a>
+                    </li>
+                </ul>
+            </div>
+            <!--div#aside-->
+            <div id="contents">
+                <div id="titleFrame">
+                    <p>HOME > 게시판 관리 > <span>게시물 관리</span></p>
+                    <h1>게시물 관리</h1>
+                </div>
+                <!--div#titleFrame-->
+                <div id="searchFrame">
+                    <ul>
+                        <li>
+                            <span>기간</span>
+                            <input type="radio" name="period" value="1"> 오늘
+                            <input type="radio" name="period" value="3" class="space"> 3일
+                            <input type="radio" name="period" value="7" class="space"> 7일
+                            <input type="radio" name="period" value="30" class="space"> 1개월
+                            <input type="text" size="8" class="datepicker"> ~ <input type="text" size="8" class="datepicker">
+                        </li>
+                        <li>
+                            <span>게시판 선택</span>
+                            <select>
+                                <option>전체목록</option>
+                                <option>공지사항</option>
+                                <option>이벤트</option>
+                                <option>갤러리</option>
+                                <option>Q&amp;A</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>게시글 찾기</span>
+                            <select>
+                                <option>제목</option>
+                                <option>작성자</option>
+                                <option>아이디</option>
+                                <option>아이피</option>
+                            </select>
+                            <input type="text" size="50">
+                        </li>
+                        <li>
+                            <span>답변 상태</span>
+                            <select>
+                                <option>전체보기</option>
+                                <option>답변 전</option>
+                                <option>답변 완료</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <button type="button">검색</button>
+                </div>
+                <!--div#searchFrame-->
+                <div id="listFrame">
+                    <div id="listFrameMenu">
+                        <p>게시물 목록</p>
+                        <p>[오늘 등록된 새 글 <span id="todayPost">0</span>건] 검색 결과 <span id="searchPost">0</span>건</p>
+                        <select>
+                            <option>10개씩 보기</option>
+                            <option>30개씩 보기</option>
+                            <option>50개씩 보기</option>
+                        </select>
+                    </div>
+                    <!--div#listFrameMene-->
+                    <div id="bbsListFrame">
+                        <div id="bbsListMenu">
+                            <span>삭제</span>
+                            |
+                            <span>공지등록</span>
+                            |
+                            <span>공지해제</span>
+                            |
+                            <span>글고정 지정</span>
+                            |
+                            <span>글고정 해제</span>
+                        </div>
+                        <!--div#userListMenu-->
+                        <div id="bbsList">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" id="chkParent"></td>
+                                        <td>번호</td>
+                                        <td>분류</td>
+                                        <td>제목</td>
+                                        <td>답변상태</td>
+                                        <td>미리보기</td>
+                                        <td>답변하기</td>
+                                        <td>작성자</td>
+                                        <td>작성일</td>
+                                        <td>조회수</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>97</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>96</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>95</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>94</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>93</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>92</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>91</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>90</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>89</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="chkChild"></td>
+                                        <td>88</td>
+                                        <td><select>
+                                                <option>공지사항</option>
+                                                <option>이벤트</option>
+                                                <option>갤러리</option>
+                                                <option>Q&amp;A</option>
+                                            </select></td>
+                                        <td>Lorem Ipsum Lorem Ipsum</td>
+                                        <td>-</td>
+                                        <td><a href="#">확인</a></td>
+                                        <td>-</td>
+                                        <td>홍길동</td>
+                                        <td>20-10-23</td>
+                                        <td>58</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--div#userListFrame-->
+                    <div id="listFramePage">
+                        <a href="#"><span>《</span></a>
+                        <a href="#"><span>〈</span></a>
+                        <a href="#"><span>1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        <a href="#"><span>4</span></a>
+                        <a href="#"><span>〉</span></a>
+                        <a href="#"><span>》</span></a>
+                    </div>
+                    <!--div#listFramePage-->
+                </div>
+                <!--div#listFrame-->
+            </div>
+            <!--div#contents-->
+
+        </main>
+        <!--main#main-->
+
+    </div>
+    <!--div#wrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+    <script src="script/script_managerPage_bbsManagement.js"></script>
+</body></html>

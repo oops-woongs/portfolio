@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>온라인 예매</title>
+    <link rel="stylesheet" href="css/style_buy_page.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav id="tnb">
+                <a href="mypage.html"><span>내 정보</span></a>
+                |
+                <a href="#"><span>로그아웃</span></a>
+            </nav>
+            <!--nav#tnb-->
+            <div id="topArea">
+                <div id="hdLogo">
+                    <a href="index.html"><img src="images/hd_logo_sample_170x80.png" alt="헤더로고"></a>
+                </div>
+                <!--div#hdLogo-->
+                <nav id="gnb">
+                    <ul id="mainMenu">
+                        <li>
+                            <a href="#">지리산단풍축제</a>
+                            <ul class="subMenu">
+                                <li><a href="#">축제개요</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램</a>
+                            <ul class="subMenu">
+                                <li><a href="#">일정</a></li>
+                                <li><a href="#">프로그램</a></li>
+                                <li><a href="#">온라인 예매</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                            <ul class="subMenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="gallery.html">갤러리</a></li>
+                                <li><a href="QnA.html">Q&amp;A</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">자원활동가</a>
+                            <ul class="subMenu">
+                                <li><a href="#">모집안내</a></li>
+                                <li><a href="#">지원하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--nav#gnb-->
+            </div>
+            <!--div#topArea-->
+            <nav id="snb">
+                <div id="snbArea">
+                    <a href="#">
+                        <div id="programTab">
+                            <span>프로그램</span>
+                            <span>+</span>
+                        </div>
+                    </a>
+                    <a href="buy_page.html">
+                        <div id="buyPageTab">
+                            <span>온라인 예매</span>
+                            <span>+</span>
+                        </div>
+                    </a>
+                    <!--div#QnATab-->
+                </div>
+                <!--div#snbArea-->
+            </nav>
+            <!--nav#snb-->
+        </header>
+        <!--header#header-->
+
+        <main id="main">
+            <div id="buyTitle">
+                <h1>온라인 예매</h1>
+                <p>HOME > 프로그램 > <span>온라인 예매</span></p>
+            </div>
+            <!--div#buyTitle-->
+            <div id="buyContents">
+                <form action="#" name="frm" id="frm">
+                    <div id="buyFrame">
+                        <div id="imgTab">
+                            <a href="#"><img src="images/gallery_sample_no_img_200x160.png" alt="예매이미지"></a>
+                        </div>
+                        <!--div#imgTab-->
+                        <div id="buyTab">
+                            <h2>제 13회 지리산 단풍축제</h2>
+                            <select id="selectProgram" onchange="fnSelect()">
+                                <option value="">예매하실 프로그램을 선택해 주세요.</option>
+                                <option value="1" onclick="fnOpt1()">lorem ipsum1</option>
+                                <option value="2" onclick="fnOpt2()">lorem ipsum2</option>
+                                <option value="3" onclick="fnOpt3()">lorem ipsum3</option>
+                                <option value="4" onclick="fnOpt4()">lorem ipsum4</option>
+                                <option value="5" onclick="fnOpt5()">lorem ipsum5</option>
+                            </select>
+                            <br>
+                            <p>입장권 가격 : <span id="price" class="price">10000</span>원</p>
+                            <hr>
+                            <p>
+                            <span id="minus">-</span>
+                            <input type="text" id="amount" size="1" value="1" maxlength="2" onFocus="fnAmtChk()" onkeyup="fnNumChk()" onblur="fnCnt()">
+                            <span id="plus">+</span>
+                            총 금액 | <span id="totalPrice" class="price">10000</span>원</p>
+                            <button type=button id="buyBtn">예매하기</button>
+                        </div>
+                        <!--div#buyTab-->
+                    </div>
+                    <!--div#buyFrame-->
+                    <div id="explainFrame">
+                        <!--select 선택 시 goods div 변경-->
+                        <div id="goods1">lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1<br>lorem ipsum1</div>
+                        <div id="goods2">lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2<br>lorem ipsum2</div>
+                        <div id="goods3">lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3<br>lorem ipsum3</div>
+                        <div id="goods4">lorem ipsum4<br>lo rem ipsum4<br>lorem ipsum4<br>lorem ipsum4<br>lorem ipsum4<br>lorem ipsum4<br>lo rem ipsum4<br>lorem ipsum4<br>lorem ipsum4<br>lorem ipsum4</div>
+                        <div id="goods5">lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5<br>lorem ipsum5</div>
+                    </div>
+                    <!--div#explainFrame-->
+                </form>
+            </div>
+            <!--div#buyContents-->
+        </main>
+        <!--main#main-->
+
+        <footer id="footer">
+            <div id="info">
+                <a href="#"><span>개인정보처리방침</span></a>
+                |
+                <a href="#"><span>이용약관</span></a>
+                |
+                <a href="#"><span>오시는 길</span></a>
+                |
+                <a href="#"><span>사이트 맵</span></a>
+                <p>서울특별시 세계구 한국동 남한길 1 우)12345 T. 02-123-4567 F. 02-890-1234</p>
+                <p>Copyright(C) 대한민국관광공사 All Right Reserved.</p>
+            </div>
+            <!--div#info-->
+            <div id="ftLogo">
+                <a href="index.html"><img src="images/ft_logo_sample_170x80.png" alt="푸터로고"></a>
+            </div>
+            <!--div#ftLogo-->
+        </footer>
+        <!--footer#footer-->
+    </div>
+    <!--div#wrap-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/script_buy_page.js"></script>
+</body></html>
